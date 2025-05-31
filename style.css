@@ -1,36 +1,32 @@
-@charset "UTF-8";
-html {
-    /* height: 100vh;
-    overflow: hidden; */
-}
-
 body {
-
-background-color: #EEEEEE;
-display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
-  overflow: hidden;
-  flex-direction: column;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+  color: #222;
 }
 
-.test{
-/*background-color: blue;*/
-    font-family: "M PLUS 1p", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-  color: #4D4441;
-  margin-top: 10px;
-  font-size: 50px;
+main {
+  padding: 2em;
 }
 
-.under {
-position: relative;
-  /* background-color: red;*/
-   width: 100%;
-   height: 100%; 
-   margin-top: 100%;
-   margin-bottom: 100%; 
+.section-top {
+  background: #4fc3f7;
+  color: #fff;
+  padding: 60px 20px 40px 20px;
+  text-align: center;
+}
+
+.wave {
+  width: 100%;
+  line-height: 0;
+  position: relative;
+  margin-bottom: -30px; /* 下のセクションと隙間ができる場合 */
+}
+
+.section-bottom {
+  background: #fff;
+  color: #222;
+  padding: 60px 20px 600px 20px;
+  text-align: center;
 }
