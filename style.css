@@ -1,32 +1,212 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  background: #f5f5f5;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f3ee;
   color: #222;
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  line-height: 1.7;
 }
 
-main {
-  padding: 2em;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
 }
 
-.section-top {
-  background: #4fc3f7;
-  color: #fff;
-  padding: 60px 20px 40px 20px;
-  text-align: center;
+.logo {
+  font-weight: 800;
+  font-size: 20px;
+  color: #222;
+  text-decoration: none;
 }
 
-.wave {
+.navbar ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.navbar a {
+  color: #222;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  opacity: 0.5;
+}
+
+.hero {
+  min-height: 85vh;
+  padding: 140px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle, .label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #888;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 9vw, 110px);
+  line-height: 1.15;
+  margin: 25px 0;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  color: #a58a65;
+}
+
+.hero-text {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 35px;
+}
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  padding: 14px 30px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #a58a65;
+  transform: translateY(-3px);
+}
+
+.section {
+  padding: 110px 12%;
+}
+
+.section h2 {
+  font-size: 45px;
+  margin: 15px 0 35px;
+}
+
+.description {
+  max-width: 650px;
+  color: #666;
+  font-size: 16px;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.work-card img {
   width: 100%;
-  line-height: 0;
-  position: relative;
-  margin-bottom: -30px; /* 下のセクションと隙間ができる場合 */
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: 0.4s;
 }
 
-.section-bottom {
-  background: #fff;
-  color: #222;
-  padding: 60px 20px 600px 20px;
+.work-card {
+  overflow: hidden;
+}
+
+.work-card:hover img {
+  transform: scale(1.03);
+}
+
+.work-card h3 {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.work-card p {
+  color: #888;
+  font-size: 13px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-list span {
+  padding: 12px 25px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 13px;
+}
+
+.contact {
+  background: #e9e5dc;
+}
+
+.contact p {
+  margin-bottom: 25px;
+}
+
+footer {
+  padding: 30px;
   text-align: center;
+  font-size: 11px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 100px 8%;
+  }
+
+  .section {
+    padding: 80px 8%;
+  }
+
+  .section h2 {
+    font-size: 35px;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
