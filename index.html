@@ -3,19 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TEST</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="section-top">
-    <h1>TEST</h1>
-  </section>
-  <div class="wave">
-    <svg viewBox="0 0 1440 500" width="100%" height="500" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#fff" d="M0,200 C360,400 1080,0 1440,200 L1440,500 L0,500 Z"/>
-    </svg>
-  </div>
-  <section class="section-bottom">
-  </section>
+
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">MY PORTFOLIO.</a>
+      <ul>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="subtitle">CREATIVE PORTFOLIO 2026</p>
+      <h1>Hello,<br>I'm <span>Your Name.</span></h1>
+      <p class="hero-text">
+        Designer / Developer / Creator
+      </p>
+      <a href="#works" class="button">VIEW MY WORKS ↗</a>
+    </section>
+
+    <section id="about" class="section">
+      <p class="label">01 / ABOUT</p>
+      <h2>About Me</h2>
+      <p class="description">
+        はじめまして。私のポートフォリオサイトへようこそ。
+        デザインやWeb制作を通じて、魅力的な体験を
+        生み出すことを目指しています。
+      </p>
+    </section>
+
+    <section id="works" class="section">
+      <p class="label">02 / WORKS</p>
+      <h2>Selected Works</h2>
+
+      <div class="works-grid">
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+               alt="Website design">
+          <h3>Website Design</h3>
+          <p>Web Design / 2026</p>
+        </article>
+
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800"
+               alt="Graphic design">
+          <h3>Graphic Design</h3>
+          <p>Graphic / 2026</p>
+        </article>
+
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800"
+               alt="Creative project">
+          <h3>Creative Project</h3>
+          <p>Creative / 2026</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <p class="label">03 / SKILLS</p>
+      <h2>My Skills</h2>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Figma</span>
+        <span>Photoshop</span>
+        <span>UI / UX Design</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <p class="label">04 / CONTACT</p>
+      <h2>Let's Talk.</h2>
+      <p>お気軽にお問い合わせください。</p>
+      <a href="mailto:your@email.com" class="button">
+        SEND AN EMAIL ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Your Name. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
